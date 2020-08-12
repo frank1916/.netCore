@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebAppLibrosNetCORE.ModelsDTO
 {
-    public class AutorDTO
+    public class AutorDTO: Recurso
     {
         public int id { get; set; }
         [Required]

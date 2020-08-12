@@ -18,36 +18,51 @@ namespace WebAppLibrosNetCORE.Controllers
     //Convencion para simplificar la codificacion
     [ApiController]
     [Route("[controller]")]
+    //versionar segun atributo de cabecera
+    //[HttpHeaderIsPresent ("x-version", "1")]
     public class AutoresController : ControllerBase
     {
         private readonly AplicationDbContext context;
         private readonly ILogger<AutoresController> logger;
         private readonly IMapper mapper;
-        private readonly IEjemploLogica ejemploLogica;
 
-        public AutoresController(AplicationDbContext context, ILogger<AutoresController> logger, IMapper mapper,
-            IEjemploLogica ejemploLogica)
+        public AutoresController(AplicationDbContext context, ILogger<AutoresController> logger, IMapper mapper)
         {
             this.context = context;
             this.logger = logger;
             this.mapper = mapper;
-            this.ejemploLogica = ejemploLogica;
         }
 
-        [HttpGet("listado")]
+        [HttpGet(Name = "listado")]
         //filltro personalizado
-        [ServiceFilter(typeof(MiFiltroDeAccion))]
-        public async Task<ActionResult<IEnumerable<AutorDTO>>> Get()
+        [ServiceFilter(typeof(HATEOASAuthorFilterAttribute))]
+        public async Task<ActionResult<IEnumerable<AutorDTO>>> Get(int numeroPagina = 1, int catidadRegistros = 3)
         {
+            // query para determinar la cantidad de registros y paginas
+            var query = context.Autores.AsQueryable();
+
+            var totalRegistros = query.Count();
+
             //throw new NotImplementedException();
-            this.logger.LogInformation("obteniendo los autores" + this.ejemploLogica.sumar(3, 4));
-            var autores = await context.Autores.Include(x => x.libros).ToListAsync();
+            var autores = await query
+                                    .Include(x => x.libros)
+                                    .Skip(catidadRegistros * (numeroPagina - 1))
+                                    .Take(catidadRegistros)
+                                    .ToListAsync();
+
+            Response.Headers["x-total-registros"] = totalRegistros.ToString();
+            Response.Headers["x-total-paginas"] = ((int)Math.Ceiling((double)totalRegistros / catidadRegistros)).ToString();
+            
+
             var autoresDTO = this.mapper.Map<List<AutorDTO>>(autores);
 
             return autoresDTO;
         }
 
         [HttpGet("{id}", Name = "ObtenerAutor")]
+        [ServiceFilter(typeof(HATEOASAuthorFilterAttribute))]
+        //[ProducesResponseType(404)]
+        //[ProducesResponseType(typeof(AutorDTO),200)]
         public async Task<ActionResult<AutorDTO>> Get(int id)
         {
             var autor = await context.Autores.Include(x => x.libros).FirstOrDefaultAsync(x => x.id == id);
@@ -62,7 +77,7 @@ namespace WebAppLibrosNetCORE.Controllers
             return autorDTO;
         }
 
-        [HttpPost]
+        [HttpPost (Name = "CrearAutor")]
         public async Task<ActionResult> Post([FromBody] AutorCreacionDTO autorCreacion)
         {
             var autor = this.mapper.Map<Autor>(autorCreacion);
@@ -72,7 +87,7 @@ namespace WebAppLibrosNetCORE.Controllers
             return new CreatedAtRouteResult("ObtenerAutor", new { id = autor.id }, autorDTO);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id}", Name = "ActualizarAutor")]
         public async Task<ActionResult> Put(int id, [FromBody] AutorCreacionDTO value)
         {
             var autor = this.mapper.Map<Autor>(value);
@@ -82,7 +97,11 @@ namespace WebAppLibrosNetCORE.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
+        /// <summary>
+        /// Borrar un autor en especifico
+        /// </summary>
+
+        [HttpDelete("{id}", Name = "EliminarAutor")]
         public async Task<ActionResult<Autor>> Delete(int id)
         {
             //var autor = await context.Autores.FirstOrDefaultAsync(x => x.id == id);
@@ -99,7 +118,7 @@ namespace WebAppLibrosNetCORE.Controllers
         }
 
 
-        [HttpPatch("{id}")]
+        [HttpPatch("{id}", Name ="ActualizarAtributoAutor")]
         public async Task<ActionResult> patch(int id, [FromBody] JsonPatchDocument<AutorCreacionDTO> patchDocument)
         {
             if (patchDocument == null)

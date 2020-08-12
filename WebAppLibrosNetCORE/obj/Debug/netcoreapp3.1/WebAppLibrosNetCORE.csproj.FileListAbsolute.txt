@@ -64,5 +64,16 @@ E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\bin\Debug\netc
 E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\bin\Debug\netcoreapp3.1\AutoMapper.dll
 E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\bin\Debug\netcoreapp3.1\EntityFramework.dll
+E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.Core.dll
+E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\obj\Debug\netcoreapp3.1\WebAppLibrosNetCORE.csproj.CoreCompileInputs.cache
+E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\obj\Debug\netcoreapp3.1\WebAppLibrosNetCORE.MvcApplicationPartsAssemblyInfo.cs
 E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\obj\Debug\netcoreapp3.1\WebAppLibrosNetCORE.MvcApplicationPartsAssemblyInfo.cache
+E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\bin\Debug\netcoreapp3.1\WebAppLibrosNetCORE.xml
+E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\obj\Debug\netcoreapp3.1\WebAppLibrosNetCORE.xml
