@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAppLibrosNetCORE</name>
+    </assembly>
+    <members>
+        <member name="M:WebAppLibrosNetCORE.Controllers.AutoresController.Delete(System.Int32)">
+            <summary>
+            Borrar un autor en especifico
+            </summary>
+        </member>
+        <member name="M:WebAppLibrosNetCORE.Entities.Autor.Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            Validacion por modelo
+        </member>
+        <member name="M:WebAppLibrosNetCORE.Helpers.PrimeraLetraMayusculaAttribute.IsValid(System.Object,System.ComponentModel.DataAnnotations.ValidationContext)">
+            validacion por atributo
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAv6OSTnm6K0C4pdIrfc+MBwAAAAACAAAAAAAQZgAAAAEAACAAAABN+S9WwQvd/KCMWbKgTynr7Aha8Xr0TcZ17wOh0OxgMQAAAAAOgAAAAAIAACAAAAAzJzk1dhtvkySLK+pU7W06QnBIUa6dC/NDMHKSZOtgbYAAAAC6zN49LvQKZ238B5v9Xr0UIFE7vMeCULPz6pZfGGzmoSmW75C6jyw4jU5POkPgFz6Pzlyw2ZS2aLhMk93JdODNX1hk1LFkRl2MFCAamoeJUG9C5uik3Km+NMG+DkZaqGOGoBDpuM/tm0sHiUIQ0nVk8hHLvoDepCkN+SEKd9dEp0AAAAD3xtsD6chL64X0stXTMev1F/nd6zn4IMtektts5uOcVCd8ii+pyP2g4KV8AaDibe6jV7DVsuEppKPJBQuYsLxC</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="WebAppLibrosNetCORE.Context.AplicationDbContext">
+      <Value>Data Source=tcp:webapinetcorelibroscursoudemydbserver.database.windows.net,1433%3bInitial Catalog=WebAPInetCoreLibrosCursoUdemy_database%3bUser Id=frank%40webapinetcorelibroscursoudemydbserver%3bPassword=librosBD1</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

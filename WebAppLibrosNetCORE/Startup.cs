@@ -126,6 +126,7 @@ namespace WebAppLibrosNetCORE
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseResponseCaching();

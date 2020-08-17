@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\obj\Release\netcoreapp3.1\PubTmp\Out\" />
+  <dbfullsql path="E:\Cursos_UDEMY\.NET-Core\WebAppLibrosNetCORE\WebAppLibrosNetCORE\obj\Release\netcoreapp3.1\PubTmp\EFSQLScripts\WebAppLibrosNetCORE.Context.AplicationDbContext.sql" />
+</sitemanifest>

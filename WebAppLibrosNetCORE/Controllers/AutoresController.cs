@@ -11,6 +11,7 @@ using WebAppLibrosNetCORE.Context;
 using WebAppLibrosNetCORE.Entities;
 using WebAppLibrosNetCORE.Helpers;
 using WebAppLibrosNetCORE.ModelsDTO;
+using WebAppLibrosNetCORE.Services;
 
 namespace WebAppLibrosNetCORE.Controllers
 {
@@ -25,6 +26,9 @@ namespace WebAppLibrosNetCORE.Controllers
         private readonly AplicationDbContext context;
         private readonly ILogger<AutoresController> logger;
         private readonly IMapper mapper;
+
+        
+
 
         public AutoresController(AplicationDbContext context, ILogger<AutoresController> logger, IMapper mapper)
         {
